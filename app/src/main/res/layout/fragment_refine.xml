@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RefineFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Appcolour">
+
+            <ImageView
+                android:id="@+id/dashboardIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/dashboardicon" />
+
+            <LinearLayout
+                android:id="@+id/toolbarTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/firstLineTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text=" Refine"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/secondLineTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:gravity="center"
+                    android:text="   Seattle, Washington"
+                    android:textColor="#F3EDED"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/baseline_location_on_24" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/selectAvailabilityText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Select Your Availability"
+            android:textColor="@color/Appcolour"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:prompt="@string/avalibel"
+            android:padding="20dp"
+            style="@style/CustomSpinnerStyle" />
+
+        <TextView
+            android:id="@+id/addstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text= "@string/add_your_status"
+            android:textColor="@color/Appcolour"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/editstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="text"
+            android:ems="30"
+            android:padding="40dp"
+            style="@style/CustomSpinnerStyle"
+            />
+
+        <TextView
+            android:id="@+id/localdistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text= "Select Hyper Local Distance "
+            android:textColor="@color/Appcolour"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:min="0"
+            android:max="100"
+            android:progress="20"
+            android:padding="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="27dp"
+                android:text="1 km"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/progressText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="290dp"
+                android:text="100 km"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text= "Select Purpose"
+            android:textColor="@color/Appcolour"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp"
+            >
+            <Button
+                android:id="@+id/buttonCoffee"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Coffee"
+                android:background="@drawable/custombuttons"
+                android:layout_marginStart="24dp" />
+
+            <Button
+                android:id="@+id/buttonBusiness"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Business"
+                android:background="@drawable/custombuttons" />
+
+            <Button
+                android:id="@+id/buttonHobbies"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Hobbies"
+                android:background="@drawable/custombuttons" />
+
+            <Button
+                android:id="@+id/buttonEducation"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Education"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/custombuttons" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/buttonMovies"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Movies"
+                android:background="@drawable/custombuttons"
+                android:layout_marginStart="24dp" />
+
+            <Button
+                android:id="@+id/buttonDining"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Dining"
+                android:background="@drawable/custombuttons" />
+
+            <Button
+                android:id="@+id/buttonDating"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Dating"
+                android:background="@drawable/custombuttons" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/finalbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="45dp"
+            android:backgroundTint="@color/Appcolour"
+            android:text="@string/refine_explore"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:background="@drawable/custombuttons"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

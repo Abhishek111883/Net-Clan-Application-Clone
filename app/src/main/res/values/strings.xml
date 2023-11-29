@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Refineandexplore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="avalibel">Available | Hey Let Us Connect</string>
+    <string name="refine_explore"><![CDATA[Refine & Explore]]></string>
+    <string name="refine">Refine</string>
+    <string name="explore">Explore</string>
+    <string name="add_your_status">Add Your Status</string>
+</resources>
